@@ -6,9 +6,11 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'devise', '1.1.rc0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
+gem 'thin'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -29,3 +31,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+group :development do
+  gem 'wirble'
+  gem 'hirb'
+end
