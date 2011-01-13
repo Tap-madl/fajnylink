@@ -1,43 +1,45 @@
-- Michal Dudzinski
-- Sebastian Hebel
+﻿- Michał Dudziński
+- Sebastian Hebel.
 - Dariusz Jackiewicz
-- Karolina Kruk
-- Mateusz Slomka
+- Karolina Kruk DZIAŁAAAAAAAAAAAAAAAAAA
+- Mateusz Słomka
 
 14.12.2010
 
 Cele:
 =====
 
-Celem projektu jest stworzenie serwisu "Fajny-link�, umozliwiajacego dzielenie sie z innymi internautami�ciekawymi, ulubionymi linkami, a takze ocenianie i komentowanie tego, co do sieci wrzucili inni. Ma byc to duze repozytorium interesujacych miejsc w sieci sortowanych przez oceny ludzi, a nie np. indeksowania Google. Celem jest takze, umozliwienie uzytkownikom bezpiecznego przechowywania swoich ulubionych/najwazniejszych link�w tak, aby mieli do nich dostep z kazdego komputera z dostepem do internetu. 
+Celem projektu jest stworzenie serwisu "Fajny-link”, umożliwiającego dzielenie się z innymi internautami ciekawymi, ulubionymi linkami, a także ocenianie i komentowanie tego, co do sieci wrzucili inni. Ma być to duże repozytorium interesujących miejsc w sieci sortowanych przez oceny ludzi, a nie np. indeksowania Google. Celem jest także, umożliwienie użytkownikom bezpiecznego przechowywania swoich ulubionych/najważniejszych linków tak, aby mieli do nich dostęp z każdego komputera z dostępem do internetu. 
 
 
 Wprowadzenie:
 =============
 
-Dokument dotyczy projektu realizowanego w ramach zajec z Architektury serwis�w internetowych. Niniejszy dokument sluzy przedstawieniu przeznaczenia tworzonego systemu, jego gl�wnych cech i przyjetych zalozen.
+Dokument dotyczy projektu realizowanego w ramach zajęć z Architektury serwisów internetowych. Niniejszy dokument służy przedstawieniu przeznaczenia tworzonego systemu, jego głównych cech i przyjętych założeń.
 
 Rynek:
 ======
 
-W sieci wystepuje pare podobnych serwis�w (www.demotywatory.pl, www.wrzuta.pl)�jednak wiekszosc z nich opiera sie na troche innego typu rozwiazaniach.�
-Serwisy te przechowuja bezposrednio dane dostarczone przez uzytkownik�w. Tj fotografie, pliki audio czy wideo co w praktyce jest uciazliwe. Po pierwsze�
-wymaga od serwisu dysponowania sporymi zasobami, a po drugie narzuca na uzytkownik�w pewne ograniczenia, np na wielkosc umieszczanych plik�w oraz�
-jest czasochlonne. Fajny-link.pl omija te uniedogodnienia. Przechowujac tylko linki/odsylacze do materialu zr�dlowych nie narzuca uzytkownikowi�
-praktycznie zadnych ograniczen i pozwala na uzywanie/kreowanie serwisu w dowolny spos�b.�
-Nowatorskim pomyslem jest opcja przechowywania prywatnych odsylaczy (podreczny schowek link�w do wybranych miejsc/plik�w w sieci) kt�ry jest niezbednikiem kazdego internauty.
+W sieci występuje parę podobnych serwisów (www.demotywatory.pl, www.wrzuta.pl) jednak większość z nich opiera się na trochę innego typu rozwiązaniach. 
+Serwisy te przechowują bezpośrednio dane dostarczone przez użytkowników. Tj fotografie, pliki audio czy wideo co w praktyce jest uciążliwe. Po pierwsze 
+wymaga od serwisu dysponowania sporymi zasobami, a po drugie narzuca na użytkowników pewne ograniczenia, np na wielkość umieszczanych plików oraz 
+jest czasochłonne. Fajny-link.pl omija te uniedogodnienia. Przechowując tylko linki/odsyłacze do materiału źródłowych nie narzuca użytkownikowi 
+praktycznie żadnych ograniczeń i pozwala na używanie/kreowanie serwisu w dowolny sposób. 
+Nowatorskim pomysłem jest opcja przechowywania prywatnych odsyłaczy (podręczny schowek linków do wybranych miejsc/plików w sieci) który jest niezbędnikiem każdego internauty.
 
-Uzytkownicy:
+Użytkownicy:
 ============
 
-Serwis "Fajny-link" jest adresowany do uzytkownik�w, kt�rzy chca podzielic sie z innymi internautami ciekawymi, ulubionymi linkami, a takze oceniac i komentowac to, co do sieci wrzucili inni.
+Serwis "Fajny-link" jest adresowany do użytkowników, którzy chcą podzielić się z innymi internautami ciekawymi, ulubionymi linkami, a także oceniać i komentować to, co do sieci wrzucili inni.
 
 Wizja projektu:
 ===============
 
-* Logowanie sie przez zewnetrzne serwisy jak twitter, facebook, google i yahoo.
-* Dodawanie publicznych link�w, wraz z kr�tkim opisem, tagami oraz opcjonalnie mozliwosc dodania pliku graficznego przedstawiajacego zawartosc strony. 
-* Sortowanie link�w wedlug: ocen, dat, kategorii oraz popularnosci (ilosci komentarzy).
-* Ocenianie oraz komentowanie link�w dodawanych przez innych uzytkownik�w.
-* Dodawanie wlasnych prywatnych link�w, niewidocznych dla innych.
+* Logowanie się przez zewnętrzne serwisy jak twitter, facebook, google i yahoo.
+* Dodawanie publicznych linków, wraz z krótkim opisem, tagami oraz opcjonalnie możliwość dodania pliku graficznego przedstawiającego zawartość strony. 
+* Sortowanie linków według: ocen, dat, kategorii oraz popularności (ilości komentarzy).
+* Ocenianie oraz komentowanie linków dodawanych przez innych użytkowników.
+* Dodawanie własnych prywatnych linków, niewidocznych dla innych.
+
+
 
