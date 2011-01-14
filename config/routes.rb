@@ -1,4 +1,6 @@
 Fajnylink::Application.routes.draw do
+  resources :links
+
   devise_for :users
 
   # The priority is based upon order of creation:
@@ -50,7 +52,7 @@ Fajnylink::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "home#index"
+  root :to => "links#index"
 
   # See how all your routes lay out with "rake routes"
 

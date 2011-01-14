@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @link.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @link.url %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @link.body %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @link.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
