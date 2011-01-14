@@ -27,6 +27,14 @@
     <b>Comment:</b>
     <%= comment.body %>
   </p>
+
+  <% if comment.user == current_user %>
+  <p>
+  <%= link_to 'Destroy Comment', [@link, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+  </p>
+  <% end %>
 <% end %>
 
 <h2>Add a comment:</h2>
