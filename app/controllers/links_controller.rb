@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 class LinksController < ApplicationController
   # GET /links
   # GET /links.xml
+  before_filter :authorize_user_read, :except => [:show, :index, :new, :create]   
+  before_filter :authenticate_user!, :only => [:new, :create]
+
   def index
     @links = Link.all
 
@@ -41,7 +45,7 @@ class LinksController < ApplicationController
   # POST /links.xml
   def create
     @link = Link.new(params[:link])
-
+    @link.user = current_user
     respond_to do |format|
       if @link.save
         format.html { redirect_to(@link, :notice => 'Link was successfully created.') }
@@ -78,6 +82,16 @@ class LinksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(links_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  protected
+
+  def authorize_user_read
+    @link = Link.find(params[:id])
+    if @link.user != current_user
+      redirect_to links_url
+      flash[:notice] = "Brak uprawnień."
     end
   end
 end

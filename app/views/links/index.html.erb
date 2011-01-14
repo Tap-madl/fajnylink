@@ -16,7 +16,7 @@
     <td><%= link.title %></td>
     <td><%= link.url %></td>
     <td><%= link.body %></td>
-    <td><%= link.user %></td>
+    <td><%= link.user.username %></td>
     <td><%= link_to 'Show', link %></td>
     <td><%= link_to 'Edit', edit_link_path(link) %></td>
     <td><%= link_to 'Destroy', link, :confirm => 'Are you sure?', :method => :delete %></td>
