@@ -7,8 +7,45 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="ramka"><div id="nazwa">Fajny Link</div></div>
+<div id="ramka2">
+  <div id="nav">
+    <p>
+     
+      <a><%= link_to "Strona Glowna", links_path %></a> |
+      <a href="">Kategorie</a> |
+      <a href="">Top</a> 
+    </p>
+  </div>
 
-<%= yield %>
+  <div id="info">
+  Witaj na stronie! <script src="http://szabloniki.com/skrypty/pobierz.php?id=dzis" type=""></script> <script src="http://szabloniki.com/skrypty/pobierz.php?id=imieniny" type=""></script>
+    </div>
+</div>			
+<div id="wrapper">	
+  <div id="l_menu">		
+    <% if user_signed_in? %>  
+     Zalogowany jako <%= current_user.email %>.<br/>
+     Nie Ty?  
+     <%= link_to "Wyloguj", destroy_user_session_path %>
+     <p id="dodaj_moje_linki"><%= link_to "Dodaj FajnyLink", new_link_path %></p>
+     <p id="dodaj_moje_linki"><%= link_to "Moje linki", current_user %></p>
+    <% else %>  
+     <%= link_to "Rejestracja", new_user_registration_path %> albo  
+     <%= link_to "Zaloguj", new_user_session_path %>  
+    <% end %> 		
+    <br/><br/><br/><br/>		
+
+  </div>
+  <div id="content">
+ 
+    <div id="user_nav">  	
+    </div>
+    <%= yield %>
+  </div>
+</div>
+
+<div id="foot">Copyright by adresstrony.pl | Szablon wykonała <a href="http://szabloniki.com" title="szablony">Sliffka</a></div>
 
 </body>
 </html>

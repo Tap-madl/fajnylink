@@ -1,25 +1,51 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>Title:</b>
+  <strong>Title:</strong>
   <%= @link.title %>
 </p>
-
 <p>
-  <b>Url:</b>
+  <strong>Url:</strong>
   <%= @link.url %>
 </p>
-
 <p>
-  <b>Body:</b>
+  <strong>Body:</strong>
   <%= @link.body %>
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @link.user %>
+  <strong>User:</strong>
+  <%= @link.user.username %>
+</p>
+
+<h2>Comments</h2>
+<% @link.comments.each do |comment| %>
+  <p>
+    <b>Commenter:</b>
+    <%= comment.user.username %>
+  </p>
+ 
+  <p>
+    <b>Comment:</b>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@link, @link.comments.build]) do |f| %>
+
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<p>
+  <%= link_to "Edit", edit_link_path(@link) %> |
+  <%= link_to "Destroy", @link, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", links_path %>
 </p>
 
 
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+
