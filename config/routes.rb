@@ -1,4 +1,4 @@
-FajnyLink::Application.routes.draw do
+Fajnylink::Application.routes.draw do
   resources :links do
     resources :comments
   end

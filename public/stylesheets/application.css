@@ -1,0 +1,84 @@
+.pretty th .current {
+ padding-right: 15px;
+ background-repeat: no-repeat;
+ background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+  background-image: url(/images/down_arrow.gif);
+ }
+
+#linki {
+	font-family: serif;
+	color:#16829E;
+	background-color:#E0F3FF;
+	width:500px
+}
+
+
+
+
+
+#tytul {
+	color:#381073;
+	font-size:18px;
+	font-weight:600;
+	text-align:center
+}
+
+#user_name {
+	font-style:italic;
+	text-align:right;
+	font-size:14px
+}
+
+
+#glosuj_data {
+	height:60px;
+	vertical-align: top
+}
+
+#ocena_komentarz {
+	vertical-align: bottom;
+	height:30px
+}
+
+#ocena {
+	text-align:left;
+	font-size:14px
+}
+
+#data {
+	text-align:right;
+	font-size:14px
+}
+
+#url {
+	font-size:14px;
+	height:25px;
+	text-align:center
+}
+
+#opis {
+	font-size:16px;
+	height:50px;
+	color:#11677D
+}
+
+#kom {
+	text-align: right
+}
+
+#dodaj_moje_linki {
+	text-decoration: underline;
+	font-size:14px
+}
+
+#komentarze {
+	background-color:#E0F3FF;
+	}
+	
