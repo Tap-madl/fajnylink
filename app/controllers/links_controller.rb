@@ -2,9 +2,14 @@
 class LinksController < ApplicationController
   # GET /links
   # GET /links.xml
-  before_filter :authorize_user_read, :except => [:show, :index, :new, :create]   
+  before_filter :authorize_user_read, :except => [:show, :index, :new, :create, :tags]   
   before_filter :authenticate_user!, :only => [:new, :create]
-
+  
+  before_filter :only => [:index, :tags] do
+    @tags = Link.tag_counts  # for tag clouds
+  end
+  
+  
   def index
     @links = Link.all
 
@@ -83,6 +88,12 @@ class LinksController < ApplicationController
       format.html { redirect_to(links_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  
+  def tag
+    @links = Link.tagged_with(params[:id])
+    render 'index'
   end
 
   protected

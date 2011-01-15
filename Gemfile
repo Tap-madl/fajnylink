@@ -10,9 +10,12 @@ gem 'devise', '1.1.rc0'
 
 gem "nifty-generators", :group => :development
 
+# TAGOWANIE
+gem 'acts-as-taggable-on'
+
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'thin'
+# gem 'thin'        <<<<<<<<<<<<<
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -34,6 +37,6 @@ gem 'thin'
 #   gem 'webrat'
 # end
 group :development do
-  gem 'wirble'
-  gem 'hirb'
+#  gem 'wirble'         <<<<<<<<<<<<<
+#  gem 'hirb'        <<<<<<<<<<<<< 
 end

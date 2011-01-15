@@ -12,7 +12,6 @@
 </p>
 
 
-
 <h2>Comments</h2>
 <% @link.comments.each do |comment| %>
   <p>
@@ -41,11 +40,14 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+  <p>
+  <strong>Tags:</strong>
+  <%= @link.tag_list %>
+</p>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-
 <p>
   <%= link_to "Edit", edit_link_path(@link) %> |
   <%= link_to "Destroy", @link, :confirm => 'Are you sure?', :method => :delete %> |

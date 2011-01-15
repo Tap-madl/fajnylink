@@ -28,15 +28,13 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
+    acts-as-taggable-on (2.0.6)
     arel (2.0.6)
     builder (2.1.2)
-    daemons (1.1.0)
     devise (1.1.rc0)
       warden (~> 0.10.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    eventmachine (0.12.10)
-    hirb (0.3.6)
     i18n (0.5.0)
     mail (2.2.14)
       activesupport (>= 2.3.6)
@@ -66,26 +64,21 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     sqlite3-ruby (1.3.2)
-    thin (1.2.7)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
+    sqlite3-ruby (1.3.2-x86-mingw32)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
-    wirble (0.1.3)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
+  acts-as-taggable-on
   devise (= 1.1.rc0)
-  hirb
   nifty-generators
   rails (= 3.0.3)
   sqlite3-ruby
-  thin
-  wirble

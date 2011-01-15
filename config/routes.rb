@@ -1,6 +1,9 @@
 Fajnylink::Application.routes.draw do
   resources :links do
     resources :comments
+    collection do
+      get :tags
+    end
   end
 
   devise_for :users
