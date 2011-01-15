@@ -15,7 +15,7 @@ gem 'acts-as-taggable-on'
 
 # Use unicorn as the web server
 # gem 'unicorn'
-# gem 'thin'        <<<<<<<<<<<<<
+gem 'thin'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -37,6 +37,6 @@ gem 'acts-as-taggable-on'
 #   gem 'webrat'
 # end
 group :development do
-#  gem 'wirble'         <<<<<<<<<<<<<
-#  gem 'hirb'        <<<<<<<<<<<<< 
+  gem 'wirble'
+  gem 'hirb'
 end

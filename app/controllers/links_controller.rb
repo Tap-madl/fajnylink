@@ -91,8 +91,8 @@ class LinksController < ApplicationController
   end
   
   
-  def tag
-    @links = Link.tagged_with(params[:id])
+  def tags
+    @links = Link.tagged_with(params[:name])
     render 'index'
   end
 
