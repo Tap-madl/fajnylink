@@ -5,7 +5,7 @@ Fajnylink::Application.routes.draw do
       get :tags, :categorys
     end
   end
-
+  resources :categories
   devise_for :users
 
   # The priority is based upon order of creation:

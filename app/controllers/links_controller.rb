@@ -7,7 +7,7 @@ class LinksController < ApplicationController
   
   before_filter :only => [:index, :tags, :categorys] do
     @tags = Link.tag_counts  # for tag clouds
-    @categorys = Link.category_counts # for categorys
+    @categories = Link.category_counts # for categorys
   end
   
   
@@ -98,11 +98,11 @@ class LinksController < ApplicationController
     render 'index'
   end
   
-  def categorys
+  
+  def categories
     @links = Link.tagged_with(params[:name])
     render 'index'
   end
-  
 
   protected
 
