@@ -29,14 +29,16 @@
      Nie Ty?  
      <%= link_to "Wyloguj", destroy_user_session_path %>
      <p id="dodaj_moje_linki"><%= link_to "Dodaj FajnyLink", new_link_path %></p>
-    
-    <% else %>  
+     <% else %>  
      <%= link_to "Rejestracja", new_user_registration_path %> albo  
      <%= link_to "Zaloguj", new_user_session_path %>  
     <% end %> 		
-    <br/><br/><br/><br/>		
-
-  </div>
+    <br/><br/><br/><br/>	
+    <%= form_tag categorys_links_path, :method => 'get' do %>
+    <%= hidden_field_tag :name, :sport %>  
+    <%= image_submit_tag "rails.png", :name =>nil %>
+    <% end %>
+   </div>
   <div id="content">
 
     <div id="user_nav">  	

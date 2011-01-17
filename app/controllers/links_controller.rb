@@ -2,11 +2,12 @@
 class LinksController < ApplicationController
   # GET /links
   # GET /links.xml
-  before_filter :authorize_user_read, :except => [:show, :index, :new, :create, :tags]   
+  before_filter :authorize_user_read, :except => [:show, :index, :new, :create, :tags, :categorys]   
   before_filter :authenticate_user!, :only => [:new, :create]
   
-  before_filter :only => [:index, :tags] do
+  before_filter :only => [:index, :tags, :categorys] do
     @tags = Link.tag_counts  # for tag clouds
+    @categorys = Link.category_counts # for categorys
   end
   
   
@@ -91,10 +92,17 @@ class LinksController < ApplicationController
   end
   
   
+  
   def tags
     @links = Link.tagged_with(params[:name])
     render 'index'
   end
+  
+  def categorys
+    @links = Link.tagged_with(params[:name])
+    render 'index'
+  end
+  
 
   protected
 

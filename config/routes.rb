@@ -2,7 +2,7 @@ Fajnylink::Application.routes.draw do
   resources :links do
     resources :comments
     collection do
-      get :tags
+      get :tags, :categorys
     end
   end
 
