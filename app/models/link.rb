@@ -11,6 +11,7 @@ class Link < ActiveRecord::Base
         where('title LIKE ? or body LIKE ?', "%#{search}%", "%#{search}%")
      else
         scoped
+     end
   end
 
 end

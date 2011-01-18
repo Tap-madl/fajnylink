@@ -6,6 +6,10 @@ Fajnylink::Application.routes.draw do
     end
   end
   resources :categories
+  
+  resources :users do
+    resources :links
+  end
   devise_for :users
 
   # The priority is based upon order of creation:
