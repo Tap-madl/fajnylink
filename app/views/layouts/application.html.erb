@@ -39,10 +39,14 @@
     <%= image_submit_tag "rails.png", :name =>nil %>
     <% end %>
     
-    <%= form_tag links_path, :method => 'get', :id => "links_search" do %>
-          <%= text_field_tag :search, params[:search] %>
-     <%= submit_tag "Szukaj", :title => nil %>
-     <% end %>
+      <%= form_tag links_path, :method => 'get', :id => "links_search" do %> 
+      <p>
+	<%= hidden_field_tag :direction, params[:direction] %>
+	<%= hidden_field_tag :sort, params[:sort] %>
+	<%= text_field_tag :search, params[:search], :size => 10 %>
+	<%= submit_tag "Szukanie", :title => nil %>
+      </p>  
+      <% end %>
     
    </div>
   <div id="content">

@@ -1,19 +1,5 @@
-<h1>Fajne Linki</h1>
+<div id="links"><%= render 'index' %></div>
 
-<%= form_tag links_path, :method => 'get', :id => "links_search" do %>
-  <p>
-     <%= hidden_field_tag :direction, params[:direction] %>
-     <%= hidden_field_tag :sort, params[:sort] %>
-  </p>
-  <div id="links"><%= render 'index' %></div>
-<% end %>
-
-<br />
-
-<%= link_to 'New Link', new_link_path %>
-
-<br></br>
-<br></br>
 <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, tags_links_path(:name=>tag.name), :class => css_class %>
+<%= link_to tag.name, tags_links_path(:name=>tag.name), :class => css_class %>
 <% end %>

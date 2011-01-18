@@ -15,21 +15,12 @@ class LinksController < ApplicationController
   def index
     @links = Link.search(params[:search]).where(:private => false).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @links }
-    end
   end
 
   # GET /links/1
   # GET /links/1.xml
   def show
     @link = Link.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @link }
-    end
   end
 
   # GET /links/new
@@ -37,10 +28,6 @@ class LinksController < ApplicationController
   def new
     @link = Link.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @link }
-    end
   end
 
   # GET /links/1/edit
@@ -53,14 +40,11 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(params[:link])
     @link.user = current_user
-    respond_to do |format|
-      if @link.save
-        format.html { redirect_to(@link, :notice => 'Link was successfully created.') }
-        format.xml  { render :xml => @link, :status => :created, :location => @link }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @link.errors, :status => :unprocessable_entity }
-      end
+    if @link.save
+      flash[:notice] = "Successfully created link."
+      redirect_to @link
+    else
+      render :action => 'new'
     end
   end
 
@@ -68,15 +52,12 @@ class LinksController < ApplicationController
   # PUT /links/1.xml
   def update
     @link = Link.find(params[:id])
-
-    respond_to do |format|
-      if @link.update_attributes(params[:link])
-        format.html { redirect_to(@link, :notice => 'Link was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @link.errors, :status => :unprocessable_entity }
-      end
+    @link = Link.find(params[:id])
+    if @link.update_attributes(params[:link])
+      flash[:notice] = "Successfully updated link."
+      redirect_to @link
+    else
+      render :action => 'edit'
     end
   end
 
@@ -85,23 +66,20 @@ class LinksController < ApplicationController
   def destroy
     @link = Link.find(params[:id])
     @link.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(links_url) }
-      format.xml  { head :ok }
-    end
+    flash[:notice] = "Successfully destroyed link."
+    redirect_to links_url
   end
   
   
   
   def tags
-    @links = Link.tagged_with(params[:name])
+    @links = Link.tagged_with(params[:name]).search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
     render 'index'
   end
   
   
   def categories
-    @links = Link.tagged_with(params[:name])
+    @links = Link.tagged_with(params[:name]).search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
     render 'index'
   end
 
