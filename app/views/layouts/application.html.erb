@@ -43,6 +43,12 @@
           <%= text_field_tag :search, params[:search] %>
      <%= submit_tag "Szukaj", :title => nil %>
      <% end %>
+     
+     <% if user_signed_in? %>
+         <center><%= gravatar_image_tag(current_user.email) %></center>
+          <% end %>
+     
+
     
    </div>
   <div id="content">
