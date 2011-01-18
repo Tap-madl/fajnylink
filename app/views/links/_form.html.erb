@@ -18,6 +18,10 @@
     <%= f.text_field :url %>
   </div>
   <div class="field">
+	 Czy link ma być prywatny?: <br />
+     <%= f.check_box :private %>
+  </div>
+  <div class="field">
     Kategoria<br />
     DOM<%= f.radio_button :category_list, :dom %>
     PRACA<%= f.radio_button :category_list, :praca %>
