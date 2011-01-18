@@ -1,0 +1,21 @@
+<table class="pretty">
+  <tr>
+<!-- atrubut sortowania -->
+    <th><%= sortable "title", "Title" %></th>
+    <th><%= sortable "url", "Url" %></th>
+    <th><%= sortable "body", "Body" %></th>
+    <th>User</th>
+  </tr>
+  <% for link in @links %>
+    <tr>
+      <td><%= link.title %></td>
+      <td><%= link.url %></td>
+      <td><%= link.body %></td>
+      <td><%= link.user.username %></td>
+      <td><%= link_to "Show", link %></td>
+      <td><%= link_to "Edit", edit_link_path(link) %></td>
+      <td><%= link_to "Destroy", link, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @links %>
