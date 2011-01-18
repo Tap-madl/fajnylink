@@ -1,6 +1,5 @@
-
 body {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
   font-family: "trebuchet ms", "verdana";
   font-size: 11px;
@@ -16,9 +15,9 @@ img {border:0px}
 #ramka {border:1px solid #71D8FB;
 		float:left;
 		margin:0 2px 0 0}
-		
+
 #ramka2 {border:1px solid #96DAF2;
-		width:615px;
+		float:left;
 		margin:0 2px 0 0}		
 
 #nazwa {padding:20px;
@@ -27,34 +26,35 @@ img {border:0px}
 		color:white;
 		font-size:20px;
 		width:130px;
+		height:30px;
 		text-align:center;
 		text-shadow: 3px 3px 5px black
 		}
 
 
-		
+
 #nav {background:url(images/tlonav.jpg);
-	  width:615px;
+	  width:515px;
 	  height:42px;
 	  border:1px solid white;
 	  font-size:12px;
 	  text-transform:uppercase;
 	  font-weight:bold
 		}		
-		
-#nav p {
+
+#nav p {text-align:center;
 		font-size:13px;
 		margin:15px 0 0 0
 		}
-		
+
 
 #info {background:#71D8FB;
 	   border:1px solid white;
 	   padding:3px}
 
-		
-		
-						
+
+
+
 #foot {
   clear: both;
   background: #75D8FA;
@@ -82,28 +82,28 @@ img {border:0px}
 		width:170px;
 		border:1px solid white;
 		color:#381073}
-		
+
 #l_menu ul {list-style: none;
 			margin: 0;	
 			padding: 0;	
 			border: none;
 			font-size:11px}
-			
+
 #l_menu li {border-bottom: 1px solid #fff;	
 		    margin: 0;	}
-		    
+
 #l_menu li a{display: block;
 		     padding: 2px 5px 2px 5px;
 		     font-weight : normal;
 		     color: #166582; 
 		     text-decoration: none;}
-		     
+
 #l_menu li a:hover {border-left: 3px solid #75D8FA;
 				    border-right: 3px solid #75D8FA;
 					color: #fff;
 					font-weight:bold;
 					background:#49ABD1}
-					
+
 #l_menu h1 {font-size:12px;
 			text-align:center;
 			margin:0;
@@ -116,4 +116,4 @@ img {border:0px}
 .css1 { font-size: 1.0em; color:#ffffff; background:#2F83A0;}
 .css2 { font-size: 1.2em; color:#ffffff; background:#2F83A0;}
 .css3 { font-size: 1.4em; color:#ffffff; background:#2F83A0;}
-.css4 { font-size: 1.6em; color:#ffffff; background:#2F83A0;} 
+.css4 { font-size: 1.6em; color:#ffffff; background:#2F83A0;}
