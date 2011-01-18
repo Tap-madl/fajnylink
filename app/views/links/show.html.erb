@@ -1,48 +1,47 @@
 <p>Ilosc komenciorow: <%= @link.comments.length %> </p>
 <p>
-  <strong>Title:</strong>
+  Tytul:
   <%= @link.title %>
 </p>
 <p>
-  <strong>Url:</strong>
+  Adres url:
   <%= @link.url %>
 </p>
 <p>
-  <strong>Body:</strong>
+  Opis linku:
   <%= @link.body %>
 </p>
 
 
-<h2>Comments</h2>
+<p><strong>Komentarze:</strong></p>
 <% @link.comments.each do |comment| %>
   <p>
-    <b>Commenter:</b>
+    Autor:
     <%= comment.user.username %>
   </p>
  
   <p>
-    <b>Comment:</b>
+    KOmentarz:
     <%= comment.body %>
   </p>
 
   <% if comment.user == current_user %>
   <p>
-  <%= link_to 'Destroy Comment', [@link, comment],
-               :confirm => 'Are you sure?',
+  <%= link_to 'Usun komentarz', [@link, comment],
+               :confirm => 'Jestes pewien?',
                :method => :delete %>
   </p>
   <% end %>
 <% end %>
 
-<h2>Add a comment:</h2>
+<p><strong>Dodaj komentarz:</strong></p>
 <%= form_for([@link, @link.comments.build]) do |f| %>
 
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_field :body %>
   </div>
   <p>
-  <strong>Tags:</strong>
+  <strong>Tagi:</strong>
   <%= @link.tag_list %>
 </p>
   <p>
@@ -54,9 +53,9 @@
   </div>
 <% end %>
 <p>
-  <%= link_to "Edit", edit_link_path(@link) %> |
-  <%= link_to "Destroy", @link, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", links_path %>
+  <%= link_to "Edytuj", edit_link_path(@link) %> |
+  <%= link_to "Usun", @link, :confirm => 'Jestes pewien?', :method => :delete %> |
+  <%= link_to "Pokaz wszystkie", links_path %>
 </p>
 
 

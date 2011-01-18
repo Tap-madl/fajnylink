@@ -27,6 +27,7 @@
      Zalogowany jako <%= current_user.email %>.<br/>
      Nie Ty?  
      <%= link_to "Wyloguj", destroy_user_session_path %>
+     <center><%= gravatar_image_tag(current_user.email) %></center><br/><br/>
      <p id="dodaj_moje_linki"><%= link_to "Dodaj FajnyLink", new_link_path %></p>
      <p id="dodaj_moje_linki"><%= link_to "Moje linki", current_user %></p>
      <% else %>  
@@ -36,10 +37,10 @@
     <br/><br/><br/><br/>	
     <%= form_tag categorys_links_path, :method => 'get' do %>
     <%= hidden_field_tag :name, :sport %>  
-    <%= image_submit_tag "rails.png", :name =>nil %>
+   <%= image_submit_tag "rails.png", :name =>nil %>
     <% end %>
     
-<<<<<<< HEAD
+
       <%= form_tag links_path, :method => 'get', :id => "links_search" do %> 
       <p>
 	<%= hidden_field_tag :direction, params[:direction] %>
@@ -48,18 +49,11 @@
 	<%= submit_tag "Szukanie", :title => nil %>
       </p>  
       <% end %>
-=======
-    <%= form_tag links_path, :method => 'get', :id => "links_search" do %>
-          <%= text_field_tag :search, params[:search] %>
-     <%= submit_tag "Szukaj", :title => nil %>
-     <% end %>
+
      
-     <% if user_signed_in? %>
-         <center><%= gravatar_image_tag(current_user.email) %></center>
-          <% end %>
+     
      
 
->>>>>>> bc6d49be35a36583e01d215848a369371d051574
     
    </div>
   <div id="content">
