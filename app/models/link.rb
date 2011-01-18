@@ -5,6 +5,13 @@ class Link < ActiveRecord::Base
   
   acts_as_taggable_on :tags, :categorys
   ActsAsTaggableOn::TagList.delimiter = " "
-  
+
+  def self.search(search)
+     if search
+        where('title LIKE ?', "%#{search}%")
+     else
+        scoped
+  end
+
 end
 
