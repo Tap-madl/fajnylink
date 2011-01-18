@@ -1,21 +1,36 @@
 <table class="pretty">
   <tr>
-<!-- atrubut sortowania -->
-    <th><%= sortable "title", "Title" %></th>
+	  <!-- atrubut sortowania -->	  
+    <th><%= sortable "title", "Tytuł" %></th>
     <th><%= sortable "url", "Url" %></th>
-    <th><%= sortable "body", "Body" %></th>
-    <th>User</th>
+    <th><%= sortable "body", "Opis" %></th>
   </tr>
-  <% for link in @links %>
-    <tr>
-      <td><%= link.title %></td>
-      <td><%= link.url %></td>
-      <td><%= link.body %></td>
-      <td><%= link.user.username %></td>
-      <td><%= link_to "Show", link %></td>
-      <td><%= link_to "Edit", edit_link_path(link) %></td>
-      <td><%= link_to "Destroy", link, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
 </table>
+
+<br/><br/>
+
+ <% for link in @links %><center>
+<table id="linki">
+    <tr id="glosuj_data"> 
+      <td id="ocena">ow gore / w dol</td>
+      <td id="data">data: <%= link.created_at %></td>
+   </tr>
+   <tr>
+      <th COLSPAN=2 id="tytul"><%= link_to link.title, link %></th>
+   </tr>
+   <tr>    
+      <td COLSPAN=2 id="url"><a href="http://<%= link.url %>"><%= link.url %></a></td>
+   </tr>
+   <tr id="opis">
+      <td><%= link.body %></td>
+   </tr>
+   <tr id="ocena_komentarz">
+      <td> ocena: 15 </td>
+      <td id="kom"> <%= link_to "Komentarze", link %> (<%= link.comments.length %>) </td>
+   </tr>
+	</table></center>
+	<br/><br/>
+  <% end %>
+
+
 <%= will_paginate @links %>
