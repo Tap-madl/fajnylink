@@ -10,8 +10,7 @@
 <div id="ramka"><div id="nazwa">Fajny Link</div></div>
 <div id="ramka2">
   <div id="nav">
-    <p>
-     
+    <p> 
       <a><%= link_to "Strona Glowna", links_path %></a> |
       <a><%= link_to "Kategorie", categories_path %></a> |
       <a href="">Top</a> 
@@ -39,6 +38,12 @@
     <%= hidden_field_tag :name, :sport %>  
     <%= image_submit_tag "rails.png", :name =>nil %>
     <% end %>
+    
+    <%= form_tag links_path, :method => 'get', :id => "links_search" do %>
+          <%= text_field_tag :search, params[:search] %>
+     <%= submit_tag "Szukaj", :title => nil %>
+     <% end %>
+    
    </div>
   <div id="content">
 

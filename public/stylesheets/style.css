@@ -18,7 +18,7 @@ img {border:0px}
 		margin:0 2px 0 0}
 		
 #ramka2 {border:1px solid #96DAF2;
-		float:left;
+		width:615px;
 		margin:0 2px 0 0}		
 
 #nazwa {padding:20px;
@@ -34,7 +34,7 @@ img {border:0px}
 
 		
 #nav {background:url(images/tlonav.jpg);
-	  width:515px;
+	  width:615px;
 	  height:42px;
 	  border:1px solid white;
 	  font-size:12px;
@@ -42,7 +42,7 @@ img {border:0px}
 	  font-weight:bold
 		}		
 		
-#nav p {text-align:center;
+#nav p {
 		font-size:13px;
 		margin:15px 0 0 0
 		}

@@ -1,11 +1,9 @@
-<h1>Listing links</h1>
+<h1>Fajne Linki</h1>
 
 <%= form_tag links_path, :method => 'get', :id => "links_search" do %>
   <p>
      <%= hidden_field_tag :direction, params[:direction] %>
      <%= hidden_field_tag :sort, params[:sort] %>
-      <%= text_field_tag :search, params[:search] %>
-     <%= submit_tag "Search", :title => nil %>
   </p>
   <div id="links"><%= render 'index' %></div>
 <% end %>
