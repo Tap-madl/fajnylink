@@ -6,14 +6,17 @@
 <td>
   <%= form_tag tags_links_path, :method => 'get' do %>
   <%= hidden_field_tag :name, :polityka %>  
-  <%= image_submit_tag "rails.png", :name =>nil %>
+  <%= image_submit_tag "/images/polityka.jpg", :name =>nil %>
   <% end %>
 </td>
 <td>
-&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;
 </td>
 <td>
 POLITYKA
+</td>
+<td>
+Wybory? Niespełnieone obietnice? Czli co w polityce piszczy.
 </td>
 </tr>
 
@@ -21,7 +24,7 @@ POLITYKA
 <td>
   <%= form_tag tags_links_path, :method => 'get' do %>
   <%= hidden_field_tag :name, :uroda %>  
-  <%= image_submit_tag "rails.png", :name =>nil %>
+  <%= image_submit_tag "/images/uroda.jpg", :name =>nil %>
   <% end %>
 </td>
 <td>
@@ -30,13 +33,16 @@ POLITYKA
 <td>
 URODA
 </td>
+<td>
+Malowanie paznokci? Masaż? W zdrowym ciele zdrowy duch.
+</td>
 </tr>
 
 <tr>
 <td>
   <%= form_tag tags_links_path, :method => 'get' do %>
   <%= hidden_field_tag :name, :wiadomosci %>  
-  <%= image_submit_tag "rails.png", :name =>nil %>
+  <%= image_submit_tag "/images/wiadomosci.png", :name =>nil %>
   <% end %>
 </td>
 <td>
@@ -45,13 +51,16 @@ URODA
 <td>
 WIADOMOŚCI
 </td>
+<td>
+Jedna baba drugiej babie ukradła... informacje z kraju i ze świata.
+</td>
 </tr>
 
 <tr>
 <td>
   <%= form_tag tags_links_path, :method => 'get' do %>
   <%= hidden_field_tag :name, :ciekawostki %>  
-  <%= image_submit_tag "rails.png", :name =>nil %>
+  <%= image_submit_tag "/images/ciekawostki.png", :name =>nil %>
   <% end %>
 </td>
 <td>
@@ -60,12 +69,15 @@ WIADOMOŚCI
 <td>
 CIEKAWOSTKI
 </td>
+<td>
+Czy w Miechucinie wylądowało UFO? Zobacz sam!
+</td>
 </tr>
 <tr>
 <td>
   <%= form_tag tags_links_path, :method => 'get' do %>
   <%= hidden_field_tag :name, :historia %>  
-  <%= image_submit_tag "rails.png", :name =>nil %>
+  <%= image_submit_tag "/images/historia.jpg", :name =>nil %>
   <% end %>
 </td>
 <td>
@@ -73,6 +85,9 @@ CIEKAWOSTKI
 </td>
 <td>
 HISTORIA
+</td>
+<td>
+Przed 45', po 45' przed 89' i po 89'
 </td>
 </tr>
 

@@ -20,7 +20,7 @@ Dokument dotyczy projektu realizowanego w ramach zajęć z Architektury serwisó
 Rynek:
 ======
 
-W sieci występuje parę podobnych serwisów (www.demotywatory.pl, www.wrzuta.pl) jednak większość z nich opiera się na trochę innego typu rozwiązaniach. 
+W sieci występuje parę podobnych serwisów (www.demotywatory.pl, www.wrzuta.pl) jednak większość z nich opiera się na trochę innego typu rozwiązaniach. 
 Serwisy te przechowują bezpośrednio dane dostarczone przez użytkowników. Tj fotografie, pliki audio czy wideo co w praktyce jest uciążliwe. Po pierwsze 
 wymaga od serwisu dysponowania sporymi zasobami, a po drugie narzuca na użytkowników pewne ograniczenia, np na wielkość umieszczanych plików oraz 
 jest czasochłonne. Fajny-link.pl omija te uniedogodnienia. Przechowując tylko linki/odsyłacze do materiału źródłowych nie narzuca użytkownikowi 

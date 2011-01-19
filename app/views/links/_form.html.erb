@@ -23,14 +23,13 @@
      <%= f.check_box :private %>
   </div>
   <div class="field">
-    Kategoria<br />
-    DOM<%= f.radio_button :category_list, :dom %>
-    PRACA<%= f.radio_button :category_list, :praca %>
-    SZKOLA<%= f.radio_button :category_list, :szkola %>
-    SPORT<%= f.radio_button :category_list, :sport %>
-    RODZINA<%= f.radio_button :category_list, :rodzina %>
-    PRZYRODA<%= f.radio_button :category_list, :przyroda %>
-  </div>
+    Kategoria:<br />
+    POLITYKA<%= f.radio_button :category_list, :polityka %> |&#160;
+    URODA<%= f.radio_button :category_list, :uroda %> |&#160;
+    WIADOMOSCI<%= f.radio_button :category_list, :wiadomosci %> |&#160;
+    CIEKAWOSTKI<%= f.radio_button :category_list, :ciekawostki %> |&#160;
+    HISTORIA<%= f.radio_button :category_list, :historia %>
+    </div>
   <div class="field">
     Krotki opis linku: <br />
     <%= f.text_area :body, :cols => 30, :rows => 5 %>

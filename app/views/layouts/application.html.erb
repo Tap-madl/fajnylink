@@ -36,21 +36,16 @@
     <% end %> 		
     <br/><br/>	
    
-
+<center>
       <%= form_tag links_path, :method => 'get', :id => "links_search" do %> 
       <p>
-	<%= hidden_field_tag :direction, params[:direction] %>
-	<%= hidden_field_tag :sort, params[:sort] %>
-	<%= text_field_tag :search, params[:search], :size => 10 %>
-	<%= submit_tag "Szukanie", :title => nil %>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+      <%= text_field_tag :search, params[:search], :size => 10 %>
+      <%= submit_tag "Szukanie", :title => nil %>
       </p>  
       <% end %>
-
-     
-     
-     
-
-    
+</center>
    </div>
   <div id="content">
 
