@@ -1,9 +1,11 @@
 <center><table id="dodaj_moje_linki" class="pretty">
   <tr>
 	  <!-- atrubut sortowania -->	  
+    <th><%= sortable "created_at", "Data wstawienia" %></th>	  
     <th><%= sortable "title", "Tytuł" %></th>
     <th><%= sortable "url", "Url" %></th>
     <th><%= sortable "body", "Opis" %></th>
+    <th><%= sortable "comments_amount", "Ilość komentarzy" %></th>
   </tr>
 </table></center>
 

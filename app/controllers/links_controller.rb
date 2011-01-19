@@ -21,6 +21,8 @@ class LinksController < ApplicationController
   # GET /links/1.xml
   def show
     @link = Link.find(params[:id])
+    @link.comments_amount = @link.comments.length
+    @link.save
   end
 
   # GET /links/new
