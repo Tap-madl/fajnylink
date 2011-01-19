@@ -18,6 +18,9 @@
       <td id="data">data: <%= link.created_at %></td>
    </tr>
    <tr>
+	<th COLSPAN=2 id="user_name"> <%= link.user.username %></th>
+   </tr>
+   <tr>
       <th COLSPAN=2 id="tytul"><%= link_to link.title, link %></th>
    </tr>
    <tr>    
@@ -30,7 +33,13 @@
       <td id="oc"> ocena: 15 </td>
       <td id="kom"> <%= link_to "Komentarze", link %> (<%= link.comments.length %>) </td>
    </tr>
-	</table></center>
+   <tr>
+      <td><%= link_to "Pokaż", link %></td>
+      <td><%= link_to "Edytuj", edit_link_path(link) %></td>
+      <td><%= link_to "Usuń", link, :confirm => 'Napewno?', :method => :delete %></td>
+   </tr>
+</table>
+</center>
 	<br/><br/>
   <% end %>
 

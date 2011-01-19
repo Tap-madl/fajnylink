@@ -1,61 +1,75 @@
-<p>Ilosc komenciorow: <%= @link.comments.length %> </p>
 <p>
-  Tytul:
+  <strong>Title:</strong>
   <%= @link.title %>
 </p>
 <p>
-  Adres url:
+  <strong>Url:</strong>
   <%= @link.url %>
 </p>
 <p>
-  Opis linku:
+  <strong>Body:</strong>
   <%= @link.body %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @link.user.username %>
+</p> 
+<p>
+  Tagi: <%= @link.tag_list %>
+</p>
 
-<p><strong>Komentarze:</strong></p>
+<h2>Komentarze :</h2>
+
 <% @link.comments.each do |comment| %>
+<div id="komentarze">
   <p>
-    Autor:
+    <b>Komentator:</b>
     <%= comment.user.username %>
   </p>
  
   <p>
-    KOmentarz:
+    <b>Komentarz:</b>
     <%= comment.body %>
   </p>
 
   <% if comment.user == current_user %>
   <p>
-  <%= link_to 'Usun komentarz', [@link, comment],
-               :confirm => 'Jestes pewien?',
+  <%= link_to 'Usuń komentarz', [@link, comment],
+               :confirm => 'Napewno?',
                :method => :delete %>
   </p>
+  </div>
+  <br/><br/>
+  
   <% end %>
+</div>
 <% end %>
 
-<p><strong>Dodaj komentarz:</strong></p>
-<%= form_for([@link, @link.comments.build]) do |f| %>
 
-  <div class="field">
-    <%= f.text_field :body %>
-  </div>
-  <p>
-  <strong>Tagi:</strong>
-  <%= @link.tag_list %>
-</p>
-  <p>
-  <strong>Kategorie:</strong>
-  <%= @link.category_list %>
-</p>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+<% if user_signed_in? %>
+  <h2>Dodaj komentarz:</h2>
+  <%= form_for([@link, @link.comments.build]) do |f| %>
+    <div class="field">
+      Treść:<br />
+      <%= f.text_area :body, :rows => 5, :columns => 5 %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% else %>
+  <h2>Trzeba być zalogowanym by móc komentować wpisy.</h2>
 <% end %>
+<% if @link.user == current_user %>
 <p>
-  <%= link_to "Edytuj", edit_link_path(@link) %> *
-  <%= link_to "Usun", @link, :confirm => 'Jestes pewien?', :method => :delete %> *
-  <%= link_to "Pokaz wszystkie", links_path %>
+  <%= link_to "Edytuj", edit_link_path(@link) %> |
+  <%= link_to "Usuń", @link, :confirm => 'Napewno?', :method => :delete %> |
+  <%= link_to "Pokaż wszystkie", links_path %>
 </p>
-
-
+<% else %>
+<p>
+  <%= link_to "Pokaż wszystkie", links_path %>
+</p>  
+<% end %>
