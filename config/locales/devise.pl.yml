@@ -1,0 +1,36 @@
+pl:
+  errors:
+    messages:
+      not_found: "Nie znaleziono."
+      already_confirmed: "Zostało już potwierdzone."
+      not_locked: "was not locked"
+
+  devise:
+    failure:
+      unauthenticated: 'By kontynuować musisz być zalogowany.'
+      unconfirmed: 'Musisz potwierdzić swoje konto przed kontynuacją.'
+      locked: 'Twoje konto jest zablokowane.'
+      invalid: 'Niepoprawny e-mail lub hasło.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Twoja sesja wygasła, prosze zalogować się ponownie.'
+      inactive: 'Your account was not activated yet.'
+    sessions:
+      signed_in: 'Jesteś zalogowany!'
+      signed_out: 'Jesteś wylogowany!'
+    passwords:
+      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+      updated: 'Your password was changed successfully. You are now signed in.'
+    confirmations:
+      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+    registrations:
+      signed_up: 'Zalogowano pomyślnie.'
+      updated: 'Zaaktualizowano konto pomyślnie.'
+      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+    unlocks:
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    mailer:
+      confirmation_instructions: 'Confirmation instructions'
+      reset_password_instructions: 'Reset password instructions'
+      unlock_instructions: 'Unlock Instructions'
