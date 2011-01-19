@@ -1,7 +1,79 @@
 <h1>Kategorie</h1>
+<br></br>
+<br></br>
+<table>
+<tr>
+<td>
+  <%= form_tag tags_links_path, :method => 'get' do %>
+  <%= hidden_field_tag :name, :polityka %>  
+  <%= image_submit_tag "rails.png", :name =>nil %>
+  <% end %>
+</td>
+<td>
+&#160;
+</td>
+<td>
+POLITYKA
+</td>
+</tr>
 
-<br></br>
-<br></br>
-<% tag_cloud(@categories, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, tags_links_path(:name=>tag.name), :class => css_class %>
-<% end %>
+<tr>
+<td>
+  <%= form_tag tags_links_path, :method => 'get' do %>
+  <%= hidden_field_tag :name, :uroda %>  
+  <%= image_submit_tag "rails.png", :name =>nil %>
+  <% end %>
+</td>
+<td>
+&#160;
+</td>
+<td>
+URODA
+</td>
+</tr>
+
+<tr>
+<td>
+  <%= form_tag tags_links_path, :method => 'get' do %>
+  <%= hidden_field_tag :name, :wiadomosci %>  
+  <%= image_submit_tag "rails.png", :name =>nil %>
+  <% end %>
+</td>
+<td>
+&#160;
+</td>
+<td>
+WIADOMOŚCI
+</td>
+</tr>
+
+<tr>
+<td>
+  <%= form_tag tags_links_path, :method => 'get' do %>
+  <%= hidden_field_tag :name, :ciekawostki %>  
+  <%= image_submit_tag "rails.png", :name =>nil %>
+  <% end %>
+</td>
+<td>
+&#160;
+</td>
+<td>
+CIEKAWOSTKI
+</td>
+</tr>
+<tr>
+<td>
+  <%= form_tag tags_links_path, :method => 'get' do %>
+  <%= hidden_field_tag :name, :historia %>  
+  <%= image_submit_tag "rails.png", :name =>nil %>
+  <% end %>
+</td>
+<td>
+&#160;
+</td>
+<td>
+HISTORIA
+</td>
+</tr>
+
+</table>

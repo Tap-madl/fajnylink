@@ -35,11 +35,7 @@
      <%= link_to "Zaloguj", new_user_session_path %>  
     <% end %> 		
     <br/><br/>	
-    <%= form_tag categorys_links_path, :method => 'get' do %>
-    <%= hidden_field_tag :name, :sport %>  
-   <%= image_submit_tag "rails.png", :name =>nil %>
-    <% end %>
-    
+   
 
       <%= form_tag links_path, :method => 'get', :id => "links_search" do %> 
       <p>
