@@ -11,8 +11,8 @@
 <div id="ramka2">
   <div id="nav">
     <p> 
-      <a><%= link_to "Strona Glowna", links_path %></a> |
-      <a><%= link_to "Kategorie", categories_path %></a> |
+      <a><%= link_to "Strona Glowna", links_path %></a> *
+      <a><%= link_to "Kategorie", categories_path %></a> *
       <a href="">Top</a> 
     </p>
   </div>
@@ -24,9 +24,9 @@
 <div id="wrapper">	
   <div id="l_menu">		
     <% if user_signed_in? %>  
-     Zalogowany jako <%= current_user.email %>.<br/>
-     Nie Ty?  
-     <%= link_to "Wyloguj", destroy_user_session_path %>
+     Zalogowany jako: <br/><%= current_user.email %>.<br/>
+     Nie Ty?  <br/>
+     <center><%= link_to "Wyloguj", destroy_user_session_path %></center><br/>
      <center><%= gravatar_image_tag(current_user.email) %></center><br/><br/>
      <p id="dodaj_moje_linki"><%= link_to "Dodaj FajnyLink", new_link_path %></p>
      <p id="dodaj_moje_linki"><%= link_to "Moje linki", current_user %></p>
@@ -34,7 +34,7 @@
      <%= link_to "Rejestracja", new_user_registration_path %> albo  
      <%= link_to "Zaloguj", new_user_session_path %>  
     <% end %> 		
-    <br/><br/><br/><br/>	
+    <br/><br/>	
     <%= form_tag categorys_links_path, :method => 'get' do %>
     <%= hidden_field_tag :name, :sport %>  
    <%= image_submit_tag "rails.png", :name =>nil %>

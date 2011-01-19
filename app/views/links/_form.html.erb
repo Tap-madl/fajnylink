@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag :all %>
 <%= form_for(@link) do |f| %>
   <% if @link.errors.any? %>
     <div id="error_explanation">
@@ -8,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-
+<div id="new">
   <div class="field">
     Tytul:<br />
     <%= f.text_field :title %>
@@ -18,21 +19,21 @@
     <%= f.text_field :url %>
   </div>
   <div class="field">
-	 Czy link ma być prywatny?: <br />
+	 Czy link ma byc prywatny?: <br />
      <%= f.check_box :private %>
   </div>
   <div class="field">
     Kategoria<br />
     DOM<%= f.radio_button :category_list, :dom %>
     PRACA<%= f.radio_button :category_list, :praca %>
-    SZKOŁA<%= f.radio_button :category_list, :szkola %>
+    SZKOLA<%= f.radio_button :category_list, :szkola %>
     SPORT<%= f.radio_button :category_list, :sport %>
     RODZINA<%= f.radio_button :category_list, :rodzina %>
     PRZYRODA<%= f.radio_button :category_list, :przyroda %>
   </div>
   <div class="field">
-    Krótki opis linku: <br />
-    <%= f.text_field :body %>
+    Krotki opis linku: <br />
+    <%= f.text_area :body, :cols => 30, :rows => 5 %>
   </div>
     <div class="field">
     Tagi:<br />
@@ -41,5 +42,6 @@
 
   <div class="actions">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>

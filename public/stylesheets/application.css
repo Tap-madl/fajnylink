@@ -13,11 +13,15 @@
  }
 
 #linki {
-	font-family: serif;
+
 	color:#16829E;
 	background-color:#E0F3FF;
-	width:430px;
+	width:500px;
+	height:50px;
+	
+	
 }
+
 
 
 
@@ -25,10 +29,26 @@
 
 #tytul {
 	color:#381073;
-	font-size:18px;
+	font-size:25px;
 	font-weight:600;
-	text-align:center
+	text-align:center;
+	font-family: comic;
 }
+
+@font-face {
+	font-family: comic;
+	src: url(HOMEWRDN.TTF) format("truetype");
+	}
+	
+@font-face {
+	font-family: comic2;
+	src: url(oknofont.ttf) format("truetype");
+	}
+
+@font-face {
+	font-family: comic3;
+	src: url(zefir1.ttf) format("truetype");
+	}
 
 #user_name {
 	font-style:italic;
@@ -38,8 +58,8 @@
 
 
 #glosuj_data {
-	height:60px;
-	vertical-align: top
+	height:30px;
+	vertical-align: top;
 }
 
 #ocena_komentarz {
@@ -49,36 +69,55 @@
 
 #ocena {
 	text-align:left;
-	font-size:14px
+	font-size:16px;
+	font-family: comic2;
 }
+
+#oc{
+	font-family:comic;
+	}
 
 #data {
 	text-align:right;
-	font-size:14px
+	font-size:14px;
+	font-family: comic;
 }
 
 #url {
-	font-size:14px;
-	height:25px;
-	text-align:center
+	font-size:20px;
+	text-align:center;
+	font-family: comic2;
+	letter-spacing: 4px;
 }
 
 #opis {
-	font-size:16px;
-	height:50px;
-	color:#11677D
+	font-family: comic;
+	font-size:20px;
+	color:#11677D;
 }
+	
 
 #kom {
-	text-align: right
+	text-align: right;
+	font-family: comic;
 }
 
 #dodaj_moje_linki {
 	text-decoration: underline;
-	font-size:14px
+	font-size:14px;
+	font-family:comic;
+	letter-spacing: 3px;
 }
 
 #komentarze {
 	background-color:#E0F3FF;
 	}
 	
+#new {
+	font-family:comic;
+	}
+	
+#napis_new {
+	font-family:comic2;
+	font-size: 30px;
+	}

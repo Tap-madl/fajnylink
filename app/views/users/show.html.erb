@@ -9,36 +9,29 @@
 
 <br/><br/>
 
- <% for link in @links %>
+ <% for link in @links %><center>
 <table id="linki">
     <tr id="glosuj_data"> 
-      <td id="ocena">w góre / w dól</td>
+      <td id="ocena">W gore / W dol</td>
       <td id="data">data: <%= link.created_at %></td>
    </tr>
    <tr>
-	<th COLSPAN=2 id="user_name"> <%= link.user.username %></th>
-   </tr>
-   <tr>
-      <th COLSPAN=2 id="tytul"><%= link.title %></th>    
+      <th COLSPAN=2 id="tytul"><%= link_to link.title, link %></th>
    </tr>
    <tr>    
-      <td COLSPAN=2 id="url"><a href="<%= link.url %>"><%= link.url %></a></td>
-   </tr>
-   <tr id="opis">
-      <td><%= link.body %></td>
-   </tr>
-   <tr id="ocena_komentarz">
-      <td> ocena: 15 </td>
-      <td id="kom"> <%= link_to "Komentarze", link %> (<%= link.comments.length %>) </td>
+      <td COLSPAN=2 id="url"><a href="http://<%= link.url %>"><%= link.url %></a></td>
    </tr>
    <tr>
-      <td><%= link_to "Pokaż", link %></td>
-      <td><%= link_to "Edytuj", edit_link_path(link) %></td>
-      <td><%= link_to "Usuń", link, :confirm => 'Napewno?', :method => :delete %></td>
+      <td id="opis"><%= link.body %></td>
    </tr>
-</table>
-	
-<% end %>
-<br/><br/>
+   <tr id="ocena_komentarz">
+      <td id="oc"> ocena: 15 </td>
+      <td id="kom"> <%= link_to "Komentarze", link %> (<%= link.comments.length %>) </td>
+   </tr>
+	</table></center>
+	<br/><br/>
+  <% end %>
+
 
 <%= will_paginate @links %>
+

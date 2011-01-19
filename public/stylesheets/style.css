@@ -1,3 +1,4 @@
+
 body {
   width: 700px;
   margin: 0 auto;
@@ -10,12 +11,16 @@ a {
   color:black
 }
 
+a:visited {
+	color:black;
+	}
+
 img {border:0px}
 
 #ramka {border:1px solid #71D8FB;
 		float:left;
 		margin:0 2px 0 0}
-
+		
 #ramka2 {border:1px solid #96DAF2;
 		float:left;
 		margin:0 2px 0 0}		
@@ -26,13 +31,12 @@ img {border:0px}
 		color:white;
 		font-size:20px;
 		width:130px;
-		height:30px;
 		text-align:center;
 		text-shadow: 3px 3px 5px black
 		}
 
 
-
+		
 #nav {background:url(images/tlonav.jpg);
 	  width:515px;
 	  height:42px;
@@ -41,20 +45,20 @@ img {border:0px}
 	  text-transform:uppercase;
 	  font-weight:bold
 		}		
-
+		
 #nav p {text-align:center;
 		font-size:13px;
 		margin:15px 0 0 0
 		}
-
+		
 
 #info {background:#71D8FB;
 	   border:1px solid white;
 	   padding:3px}
 
-
-
-
+		
+		
+						
 #foot {
   clear: both;
   background: #75D8FA;
@@ -74,36 +78,43 @@ img {border:0px}
 
 #wrapper{float:left;width:100%}
 
+@font-face {
+	font-family: comic3;
+	src: url(zefir1.ttf) format("truetype");
+	}
 
 #l_menu {float: left;
+		font-family: comic3;
+		font-size: 14px;
 		padding: 0;
 		margin: 1px;
 		background:#DCEEFA;
+		letter-spacing: 0,5px;
 		width:170px;
 		border:1px solid white;
 		color:#381073}
-
+		
 #l_menu ul {list-style: none;
 			margin: 0;	
 			padding: 0;	
 			border: none;
 			font-size:11px}
-
+			
 #l_menu li {border-bottom: 1px solid #fff;	
 		    margin: 0;	}
-
+		    
 #l_menu li a{display: block;
 		     padding: 2px 5px 2px 5px;
 		     font-weight : normal;
 		     color: #166582; 
 		     text-decoration: none;}
-
+		     
 #l_menu li a:hover {border-left: 3px solid #75D8FA;
 				    border-right: 3px solid #75D8FA;
 					color: #fff;
 					font-weight:bold;
 					background:#49ABD1}
-
+					
 #l_menu h1 {font-size:12px;
 			text-align:center;
 			margin:0;

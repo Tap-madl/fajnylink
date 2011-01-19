@@ -1,18 +1,18 @@
-<table class="pretty">
+<center><table id="dodaj_moje_linki" class="pretty">
   <tr>
 	  <!-- atrubut sortowania -->	  
     <th><%= sortable "title", "Tytuł" %></th>
     <th><%= sortable "url", "Url" %></th>
     <th><%= sortable "body", "Opis" %></th>
   </tr>
-</table>
+</table></center>
 
 <br/><br/>
 
  <% for link in @links %><center>
 <table id="linki">
     <tr id="glosuj_data"> 
-      <td id="ocena">ow gore / w dol</td>
+      <td id="ocena">W gore / W dol</td>
       <td id="data">data: <%= link.created_at %></td>
    </tr>
    <tr>
@@ -21,11 +21,11 @@
    <tr>    
       <td COLSPAN=2 id="url"><a href="http://<%= link.url %>"><%= link.url %></a></td>
    </tr>
-   <tr id="opis">
-      <td><%= link.body %></td>
+   <tr>
+      <td id="opis"><%= link.body %></td>
    </tr>
    <tr id="ocena_komentarz">
-      <td> ocena: 15 </td>
+      <td id="oc"> ocena: 15 </td>
       <td id="kom"> <%= link_to "Komentarze", link %> (<%= link.comments.length %>) </td>
    </tr>
 	</table></center>
